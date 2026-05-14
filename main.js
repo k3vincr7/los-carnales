@@ -45,7 +45,7 @@
 
   // ── SCROLL REVEAL ────────────────────────────────────────────
   const revealEls = document.querySelectorAll(
-    '.about-text, .about-img, .menu-item, .table-card, .event-card, .contact-info, .contact-form-wrap, .stat'
+    '.level-card, .menu-item, .pricing-card, .rules-box, .tournament-card, .event-card, .contact-info, .contact-form-wrap, .stat, .food-callout'
   );
 
   revealEls.forEach(el => el.classList.add('reveal'));
@@ -79,19 +79,19 @@
     const message = form.message.value.trim();
 
     if (!name || !email || !message) {
-      showStatus('Please fill in all required fields.', 'error');
+      showStatus('Por favor llena todos los campos requeridos.', 'error');
       return;
     }
 
     if (!isValidEmail(email)) {
-      showStatus('Please enter a valid email address.', 'error');
+      showStatus('Por favor ingresa un correo electrónico válido.', 'error');
       return;
     }
 
     // Placeholder submission — swap in your backend/Formspree endpoint
-    showStatus('Sending…', '');
+    showStatus('Enviando…', '');
     setTimeout(() => {
-      showStatus('Message sent! We\'ll be in touch soon.', 'success');
+      showStatus('¡Mensaje enviado! Te contactamos pronto.', 'success');
       form.reset();
     }, 1000);
   });

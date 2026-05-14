@@ -810,20 +810,23 @@ ul { list-style: none; }
 /* ── RESPONSIVE ──────────────────────────── */
 
 @media (max-width: 900px) {
-  .about-grid,
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
 
-  .tables-grid {
+  .levels-grid,
+  .tournament-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .about-img { display: none; }
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -877,6 +880,328 @@ ul { list-style: none; }
   .about-stats { flex-direction: column; gap: 1.5rem; }
   .tab-btn { padding: 0.65rem 1rem; font-size: 0.72rem; }
   .menu-grid { grid-template-columns: 1fr; }
+}
+
+/* ── HERO TAGLINE ────────────────────────── */
+
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+/* ── TWO-LEVEL SECTION ───────────────────── */
+
+.levels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem 0;
+}
+
+.level-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: border-color var(--transition);
+}
+
+.level-card:hover { border-color: var(--gold-dark); }
+
+.level-card-bar {
+  border-color: var(--gold-dark);
+  background: var(--surface-2);
+}
+
+.level-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dark);
+  border-radius: 2px;
+  padding: 0.2rem 0.7rem;
+  margin-bottom: 0.85rem;
+}
+
+.level-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.level-card > p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.level-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.level-features li {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.level-features li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ── MENU TAB INTRO ──────────────────────── */
+
+.tab-intro {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.menu-group-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.menu-item-special {
+  border-color: var(--gold-dark) !important;
+}
+
+/* ── FOOD CALLOUT ────────────────────────── */
+
+.food-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 3rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 2rem;
+}
+
+.food-callout-icon { font-size: 1.5rem; flex-shrink: 0; }
+
+.food-callout-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.food-callout-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ── TABLE PRICING ───────────────────────── */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.pricing-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: border-color var(--transition);
+}
+
+.pricing-card:hover { border-color: var(--gold-dark); }
+
+.pricing-card-featured {
+  border-color: var(--gold-dark);
+  background: var(--surface-2);
+}
+
+.pricing-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.pricing-time {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.pricing-amount {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-amount span {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.pricing-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  text-align: left;
+}
+
+.pricing-features li {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.pricing-features li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+}
+
+/* ── RULES BOX ───────────────────────────── */
+
+.rules-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+}
+
+.rules-box h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rules-list li {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.rules-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+/* ── TOURNAMENTS ─────────────────────────── */
+
+.tournament-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.tournament-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--transition);
+}
+
+.tournament-card:hover { border-color: var(--gold-dark); }
+
+.tournament-card-featured {
+  border-color: var(--gold-dark);
+  background: var(--surface-2);
+}
+
+.tournament-freq {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.tournament-card h3 { font-size: 1.3rem; }
+
+.tournament-card > p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.tournament-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tournament-details li {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.tournament-details li span {
+  min-width: 90px;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* ── AGE NOTE ────────────────────────────── */
+
+.age-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
 }
 
 /* ── SCROLL REVEAL ───────────────────────── */
