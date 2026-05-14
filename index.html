@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Los Carnales – Billiard Lounge</title>
+  <title>Los Carnales Bar — Billar &amp; Bar, San Felipe Gto.</title>
+  <meta name="description" content="Los Carnales Bar — Billar profesional y bar en San Felipe, Guanajuato. Donde el billar se vive diferente." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,15 +16,16 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo">Los Carnales</a>
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#tables">Tables</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#mesas">Mesas</a></li>
+        <li><a href="#torneos">Torneos</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </div>
   </nav>
@@ -32,339 +34,456 @@
   <section id="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Est. 2024</p>
+      <p class="hero-eyebrow">Est. 2024 &middot; San Felipe, Gto.</p>
       <h1>Los Carnales</h1>
-      <p class="hero-sub">Billiard Lounge &amp; Cocktail Bar</p>
+      <p class="hero-sub">Bar &amp; Billar</p>
+      <p class="hero-tagline">Donde el billar se vive diferente.</p>
       <div class="hero-cta">
-        <a href="#tables" class="btn btn-primary">Reserve a Table</a>
-        <a href="#menu" class="btn btn-outline">View Menu</a>
+        <a href="#mesas" class="btn btn-primary">Reservar Mesa</a>
+        <a href="#menu" class="btn btn-outline">Ver Menú</a>
       </div>
     </div>
-    <a href="#about" class="scroll-down" aria-label="Scroll down">
+    <a href="#nosotros" class="scroll-down" aria-label="Bajar">
       <span class="scroll-arrow"></span>
     </a>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container about-grid">
-      <div class="about-img">
-        <div class="about-img-placeholder"></div>
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <span class="section-label">Nuestra Historia</span>
+      <h2>Dos Pisos. Una Vibra.</h2>
+      <p class="section-intro">Los Carnales es un billar moderno y bar premium en el corazón de San Felipe, Guanajuato. Diseñado para vivirse a fondo — ya sea en una partida rápida abajo o una noche larga arriba.</p>
+
+      <div class="levels-grid">
+        <div class="level-card">
+          <span class="level-tag">Planta Baja</span>
+          <h3>Zona de Billar</h3>
+          <p>Cinco mesas profesionales, servicio rápido de cervezas y un ambiente de alta energía. Para los que vienen a jugar en serio.</p>
+          <ul class="level-features">
+            <li>5 mesas profesionales</li>
+            <li>Servicio rápido de cervezas</li>
+            <li>Ambiente dinámico</li>
+            <li>Walk-ins bienvenidos</li>
+          </ul>
+        </div>
+        <div class="level-card level-card-bar">
+          <span class="level-tag">Planta Alta</span>
+          <h3>Bar &amp; Lounge</h3>
+          <p>Bar completo con cocteles, área de asientos y una vibra más relajada. Para los que vienen a quedarse un rato.</p>
+          <ul class="level-features">
+            <li>Bar completo de cocteles</li>
+            <li>Área de asientos cómodos</li>
+            <li>Ambiente lounge</li>
+            <li>Vista al área de juego</li>
+          </ul>
+        </div>
       </div>
-      <div class="about-text">
-        <span class="section-label">Our Story</span>
-        <h2>Where Every Shot Counts</h2>
-        <p>Los Carnales is more than a billiard hall — it's a gathering place. A dimly lit room where conversations flow as freely as the drinks, and the crack of a well-struck cue ball is its own kind of music.</p>
-        <p>We blend old-school pool hall soul with a curated cocktail program and an atmosphere that keeps you coming back. Whether you're a seasoned player or just here for the vibe, there's a seat — and a stool — with your name on it.</p>
-        <div class="about-stats">
-          <div class="stat">
-            <span class="stat-num">12</span>
-            <span class="stat-label">Billiard Tables</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">50+</span>
-            <span class="stat-label">Spirits &amp; Cocktails</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">7</span>
-            <span class="stat-label">Days a Week</span>
-          </div>
+
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Mesas de Billar</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Pisos de Experiencia</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">6</span>
+          <span class="stat-label">Días a la Semana</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MENU -->
+  <!-- MENÚ -->
   <section id="menu" class="section section-dark">
     <div class="container">
-      <span class="section-label">Drinks &amp; More</span>
-      <h2>The Menu</h2>
+      <span class="section-label">Drinks</span>
+      <h2>El Menú</h2>
       <div class="tab-bar">
-        <button class="tab-btn active" data-tab="cocktails">Cocktails</button>
-        <button class="tab-btn" data-tab="spirits">Spirits</button>
-        <button class="tab-btn" data-tab="beer">Beer &amp; More</button>
+        <button class="tab-btn active" data-tab="cervezas">Cervezas</button>
+        <button class="tab-btn" data-tab="cocteles">Cocteles</button>
+        <button class="tab-btn" data-tab="micheladas">Micheladas</button>
       </div>
 
-      <div class="tab-panel active" id="tab-cocktails">
+      <!-- CERVEZAS -->
+      <div class="tab-panel active" id="tab-cervezas">
+        <p class="tab-intro">Cerveza fría, siempre. De barril o botella — tú decides.</p>
+        <div class="menu-group-label">De Barril</div>
         <div class="menu-grid">
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">El Carnale</span>
-              <span class="menu-item-price">$14</span>
+              <span class="menu-item-name">Corona Draft</span>
+              <span class="menu-item-price">$65</span>
             </div>
-            <p class="menu-item-desc">Mezcal, agave, fresh lime, smoked salt rim</p>
+            <p class="menu-item-desc">Ligera y refrescante — clásico mexicano de barril</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">Eight Ball</span>
-              <span class="menu-item-price">$13</span>
+              <span class="menu-item-name">Modelo Draft</span>
+              <span class="menu-item-price">$70</span>
             </div>
-            <p class="menu-item-desc">Blackberry bourbon, honey syrup, lemon, club soda</p>
+            <p class="menu-item-desc">Pilsner estilo Munich, suave y bien balanceada</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">La Noche</span>
-              <span class="menu-item-price">$15</span>
+              <span class="menu-item-name">Michelob Ultra Draft</span>
+              <span class="menu-item-price">$70</span>
             </div>
-            <p class="menu-item-desc">Dark rum, cold brew, Kahlúa, cream, espresso foam</p>
+            <p class="menu-item-desc">Ligera, baja en calorías — para jugar toda la noche</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">Break Shot</span>
-              <span class="menu-item-price">$12</span>
+              <span class="menu-item-name">Opción Rotatoria</span>
+              <span class="menu-item-price">Consulta</span>
             </div>
-            <p class="menu-item-desc">Tequila blanco, jalapeño, pineapple, tajín rim</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">The Hustler</span>
-              <span class="menu-item-price">$14</span>
-            </div>
-            <p class="menu-item-desc">Rye whiskey, sweet vermouth, Angostura, cherry</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Side Pocket</span>
-              <span class="menu-item-price">$13</span>
-            </div>
-            <p class="menu-item-desc">Vodka, elderflower, cucumber, tonic, fresh mint</p>
+            <p class="menu-item-desc">Selección especial de temporada — pregunta en barra</p>
           </div>
         </div>
-      </div>
-
-      <div class="tab-panel" id="tab-spirits">
+        <div class="menu-group-label" style="margin-top:2rem;">Botella &amp; Lata</div>
         <div class="menu-grid">
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">Clase Azul Reposado</span>
-              <span class="menu-item-price">$22</span>
+              <span class="menu-item-name">Corona</span>
+              <span class="menu-item-price">$55</span>
             </div>
-            <p class="menu-item-desc">Premium tequila — smooth, oaky, caramel finish</p>
+            <p class="menu-item-desc">El clásico de siempre, bien fría</p>
           </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Don Julio 1942</span>
-              <span class="menu-item-price">$28</span>
-            </div>
-            <p class="menu-item-desc">Añejo tequila — vanilla, caramel, toasted oak</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Casamigos Mezcal</span>
-              <span class="menu-item-price">$18</span>
-            </div>
-            <p class="menu-item-desc">Smoky, earthy with a clean citrus finish</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Bulleit Rye</span>
-              <span class="menu-item-price">$12</span>
-            </div>
-            <p class="menu-item-desc">Bold spice, dried fruit, long warming finish</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Hennessy VSOP</span>
-              <span class="menu-item-price">$16</span>
-            </div>
-            <p class="menu-item-desc">Rich oak, vanilla, dried fruit — classic cognac</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Macallan 12</span>
-              <span class="menu-item-price">$20</span>
-            </div>
-            <p class="menu-item-desc">Sherry oak Scotch — rich dried fruits, wood spice</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="tab-panel" id="tab-beer">
-        <div class="menu-grid">
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Modelo Especial</span>
-              <span class="menu-item-price">$6</span>
+              <span class="menu-item-price">$60</span>
             </div>
-            <p class="menu-item-desc">Crisp pilsner-style lager — always cold</p>
+            <p class="menu-item-desc">Pilsner de carácter, suave y refrescante</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">Pacifico</span>
-              <span class="menu-item-price">$6</span>
+              <span class="menu-item-name">Michelob Ultra</span>
+              <span class="menu-item-price">$60</span>
             </div>
-            <p class="menu-item-desc">Light Mexican lager with a clean finish</p>
+            <p class="menu-item-desc">Ligera, perfecta para una sesión larga</p>
           </div>
           <div class="menu-item">
             <div class="menu-item-header">
-              <span class="menu-item-name">Negra Modelo</span>
-              <span class="menu-item-price">$7</span>
+              <span class="menu-item-name">Tecate</span>
+              <span class="menu-item-price">$50</span>
             </div>
-            <p class="menu-item-desc">Dark Munich-style Dunkel lager — rich &amp; smooth</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Draft Selection</span>
-              <span class="menu-item-price">$8</span>
-            </div>
-            <p class="menu-item-desc">Rotating local craft tap — ask your bartender</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">Jarritos</span>
-              <span class="menu-item-price">$4</span>
-            </div>
-            <p class="menu-item-desc">Mexican fruit sodas — tamarind, mango, lime</p>
-          </div>
-          <div class="menu-item">
-            <div class="menu-item-header">
-              <span class="menu-item-name">House Water</span>
-              <span class="menu-item-price">$0</span>
-            </div>
-            <p class="menu-item-desc">Still or sparkling — stay hydrated, play better</p>
+            <p class="menu-item-desc">Refrescante y directa — sin rodeos</p>
           </div>
         </div>
       </div>
+
+      <!-- COCTELES -->
+      <div class="tab-panel" id="tab-cocteles">
+        <p class="tab-intro">Clásicos bien hechos y los especiales de la casa.</p>
+        <div class="menu-group-label">Clásicos</div>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Margarita Clásica</span>
+              <span class="menu-item-price">$95</span>
+            </div>
+            <p class="menu-item-desc">Tequila, triple sec, limón fresco, sal</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Paloma</span>
+              <span class="menu-item-price">$90</span>
+            </div>
+            <p class="menu-item-desc">Tequila, toronja, limón, sal de mar</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Ranch Water</span>
+              <span class="menu-item-price">$90</span>
+            </div>
+            <p class="menu-item-desc">Tequila blanco, Topo Chico, limón</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Whiskey &amp; Coke</span>
+              <span class="menu-item-price">$95</span>
+            </div>
+            <p class="menu-item-desc">Whiskey de calidad, Coca-Cola, hielo</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Vodka Tónica</span>
+              <span class="menu-item-price">$85</span>
+            </div>
+            <p class="menu-item-desc">Vodka, agua tónica, limón, hielo</p>
+          </div>
+        </div>
+        <div class="menu-group-label" style="margin-top:2rem;">Carnales Specials</div>
+        <div class="menu-grid">
+          <div class="menu-item menu-item-special">
+            <div class="menu-item-header">
+              <span class="menu-item-name">La Carnalita</span>
+              <span class="menu-item-price">$110</span>
+            </div>
+            <p class="menu-item-desc">Coctel especial de la casa — pregunta al bartender por los ingredientes del día</p>
+          </div>
+          <div class="menu-item menu-item-special">
+            <div class="menu-item-header">
+              <span class="menu-item-name">La Miche Carnales</span>
+              <span class="menu-item-price">$105</span>
+            </div>
+            <p class="menu-item-desc">Nuestra versión premium de la michelada — versión coctel con toque secreto</p>
+          </div>
+          <div class="menu-item menu-item-special">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Margarita de la Casa</span>
+              <span class="menu-item-price">$105</span>
+            </div>
+            <p class="menu-item-desc">La margarita que nos define — receta propia, sabor único</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MICHELADAS -->
+      <div class="tab-panel" id="tab-micheladas">
+        <p class="tab-intro">Hechas a mano. Bien sazonadas. Como debe ser.</p>
+        <div class="menu-grid">
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Michelada Tradicional</span>
+              <span class="menu-item-price">$75</span>
+            </div>
+            <p class="menu-item-desc">Cerveza, limón, sal, clamato, salsa Maggi — el clásico de toda la vida</p>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Michelada Picante</span>
+              <span class="menu-item-price">$80</span>
+            </div>
+            <p class="menu-item-desc">Todo lo clásico más salsa valentina, chamoy y chile piquín en el borde</p>
+          </div>
+          <div class="menu-item menu-item-special">
+            <div class="menu-item-header">
+              <span class="menu-item-name">Especial Carnales</span>
+              <span class="menu-item-price">$95</span>
+            </div>
+            <p class="menu-item-desc">Nuestra michelada premium — receta propia, ingredientes secretos, nivel diferente</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOD CALLOUT -->
+      <div class="food-callout">
+        <span class="food-callout-icon">🍔</span>
+        <div>
+          <p class="food-callout-title">¿Antojo?</p>
+          <p class="food-callout-text">Contamos con servicio de entrega de nuestros socios gastronómicos — hamburguesas, tacos y más. Pregunta a tu mesero por el menú disponible.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- TABLES -->
-  <section id="tables" class="section">
+  <!-- MESAS -->
+  <section id="mesas" class="section">
     <div class="container">
-      <span class="section-label">Play</span>
-      <h2>Billiard Tables</h2>
-      <p class="section-intro">Twelve regulation tables. By the hour or by the night — however long the game takes.</p>
-      <div class="tables-grid">
-        <div class="table-card">
-          <div class="table-icon">◈</div>
-          <h3>Standard Tables</h3>
-          <p>Eight 7-ft tables available for walk-ins and hourly reservations. Pool, 8-ball, 9-ball.</p>
-          <p class="table-rate">$15 <span>/ hour</span></p>
+      <span class="section-label">Juega</span>
+      <h2>Mesas de Billar</h2>
+      <p class="section-intro">Cinco mesas profesionales. Walk-ins bienvenidos o reserva con anticipación.</p>
+
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-label">Tarifa Día</div>
+          <div class="pricing-time">Hasta las 6 PM</div>
+          <div class="pricing-amount">$80 <span>MXN/hr</span></div>
+          <ul class="pricing-features">
+            <li>Ambiente familiar</li>
+            <li>Walk-ins bienvenidos</li>
+            <li>Equipo incluido</li>
+          </ul>
         </div>
-        <div class="table-card table-card-featured">
-          <div class="table-icon">◈</div>
-          <h3>VIP Tables</h3>
-          <p>Four 9-ft tournament-grade tables in a semi-private section. Includes dedicated server.</p>
-          <p class="table-rate">$30 <span>/ hour</span></p>
-        </div>
-        <div class="table-card">
-          <div class="table-icon">◈</div>
-          <h3>Private Room</h3>
-          <p>Two tables in a fully enclosed room — perfect for groups, birthdays, and private events.</p>
-          <p class="table-rate">$200 <span>/ 3 hrs</span></p>
+        <div class="pricing-card pricing-card-featured">
+          <div class="pricing-label">Tarifa Noche</div>
+          <div class="pricing-time">Después de las 6 PM</div>
+          <div class="pricing-amount">$100 <span>MXN/hr</span></div>
+          <ul class="pricing-features">
+            <li>+18 a partir de las 6 PM</li>
+            <li>Ambiente nocturno</li>
+            <li>Equipo incluido</li>
+          </ul>
         </div>
       </div>
+
+      <div class="rules-box">
+        <h4>Reglamento de Mesas</h4>
+        <ul class="rules-list">
+          <li>No se permiten bebidas ni comida sobre las mesas de billar</li>
+          <li>Alimentos y bebidas deben mantenerse en las mesas laterales</li>
+          <li>Se exige respeto al equipo — daños pueden ser cobrados</li>
+          <li>Reservaciones sujetas a disponibilidad</li>
+        </ul>
+      </div>
+
       <div class="tables-cta">
-        <a href="#contact" class="btn btn-primary">Make a Reservation</a>
+        <a href="#contacto" class="btn btn-primary">Reservar Mesa</a>
       </div>
     </div>
   </section>
 
-  <!-- EVENTS -->
-  <section id="events" class="section section-dark">
+  <!-- TORNEOS -->
+  <section id="torneos" class="section section-dark">
     <div class="container">
-      <span class="section-label">What's On</span>
-      <h2>Events</h2>
+      <span class="section-label">Compite</span>
+      <h2>Torneos</h2>
+      <p class="section-intro">Abiertos a todos los niveles. Ven a demostrar de qué estás hecho.</p>
+
+      <div class="tournament-grid">
+        <div class="tournament-card">
+          <div class="tournament-freq">Cada semana</div>
+          <h3>Torneo Semanal</h3>
+          <p>Viernes o sábado por la noche. Formato de eliminación, abierto a todos. Premiación en efectivo para los tres primeros lugares.</p>
+          <ul class="tournament-details">
+            <li><span>Formato</span>Eliminación directa</li>
+            <li><span>Inscripción</span>Precio por definir</li>
+            <li><span>Premios</span>Efectivo + horas gratis</li>
+            <li><span>Nivel</span>Todos los niveles</li>
+          </ul>
+          <a href="#contacto" class="btn btn-outline">Únete al torneo</a>
+        </div>
+        <div class="tournament-card tournament-card-featured">
+          <div class="tournament-freq">Cada mes</div>
+          <h3>Campeonato Mensual</h3>
+          <p>El torneo grande. Más competidores, mayor premio y un ambiente de puro evento. El trofeo rota entre los campeones.</p>
+          <ul class="tournament-details">
+            <li><span>Formato</span>Fase de grupos + eliminación</li>
+            <li><span>Inscripción</span>Precio por definir</li>
+            <li><span>Premios</span>Premio mayor + trofeo + bebidas</li>
+            <li><span>Nivel</span>Competitivo</li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary">Únete al torneo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section id="eventos" class="section">
+    <div class="container">
+      <span class="section-label">Lo que viene</span>
+      <h2>Eventos</h2>
       <div class="events-list">
         <div class="event-card">
           <div class="event-date">
-            <span class="event-day">FRI</span>
+            <span class="event-day">VIE</span>
             <span class="event-num">–</span>
           </div>
           <div class="event-info">
-            <h3>Friday Night 8-Ball Tournament</h3>
-            <p>Open to all skill levels. $20 buy-in. Cash prizes for top 3. Sign-ups at the bar by 8 PM.</p>
-            <span class="event-tag">Weekly</span>
+            <h3>Noche de Torneo Semanal</h3>
+            <p>El torneo de cada semana. Inscríbete en barra antes de las 8 PM. $20 de inscripción, premiación en efectivo.</p>
+            <span class="event-tag">Semanal</span>
           </div>
         </div>
         <div class="event-card">
           <div class="event-date">
-            <span class="event-day">SAT</span>
+            <span class="event-day">VAR</span>
             <span class="event-num">–</span>
           </div>
           <div class="event-info">
-            <h3>Los Carnales Open — Doubles</h3>
-            <p>Bring your partner. Monthly doubles tournament with a rotating trophy and serious bragging rights.</p>
-            <span class="event-tag">Monthly</span>
+            <h3>Noches de Música en Vivo</h3>
+            <p>Música en vivo en el lounge del segundo piso. Fechas por anunciar — síguenos en Instagram para no perderte nada.</p>
+            <span class="event-tag">Próximamente</span>
           </div>
         </div>
         <div class="event-card">
           <div class="event-date">
-            <span class="event-day">WED</span>
+            <span class="event-day">MIÉ</span>
             <span class="event-num">–</span>
           </div>
           <div class="event-info">
-            <h3>Happy Hour &amp; Table Special</h3>
-            <p>$2 off all cocktails and spirits. Half-price table rates 4–7 PM every Wednesday.</p>
-            <span class="event-tag">Weekly</span>
+            <h3>Miércoles de Promo</h3>
+            <p>Descuentos en cervezas y tarifa reducida en mesas. El respiro de mitad de semana que necesitas.</p>
+            <span class="event-tag">Semanal</span>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-day">VAR</span>
+            <span class="event-num">–</span>
+          </div>
+          <div class="event-info">
+            <h3>Watch Parties &amp; Noches Temáticas</h3>
+            <p>Partidos, fechas especiales y noches con tema. Siempre algo nuevo en Los Carnales.</p>
+            <span class="event-tag">Próximamente</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
+  <!-- CONTACTO -->
+  <section id="contacto" class="section section-dark">
     <div class="container contact-grid">
       <div class="contact-info">
-        <span class="section-label">Find Us</span>
-        <h2>Come In</h2>
+        <span class="section-label">Encuéntranos</span>
+        <h2>Visítanos</h2>
         <ul class="contact-details">
           <li>
             <span class="contact-icon">📍</span>
-            <span>123 Placeholder Ave, City, TX 00000</span>
+            <span>Avenida Miramar 601,<br>San Felipe, Guanajuato, México</span>
           </li>
           <li>
             <span class="contact-icon">📞</span>
-            <span><a href="tel:+15550000000">(555) 000-0000</a></span>
+            <span><a href="tel:+">(XXX) XXX-XXXX</a></span>
           </li>
           <li>
             <span class="contact-icon">🕐</span>
             <div class="hours">
-              <p>Mon – Thu: 4 PM – 12 AM</p>
-              <p>Fri – Sat: 2 PM – 2 AM</p>
-              <p>Sun: 2 PM – 10 PM</p>
+              <p>Martes – Viernes: 12 PM – 12 AM</p>
+              <p>Sábado – Domingo: 12 PM – cierre tarde</p>
+              <p>Lunes: Cerrado</p>
             </div>
+          </li>
+          <li>
+            <span class="contact-icon">🔞</span>
+            <span class="age-note">Ambiente familiar de día &middot; +18 a partir de las 6 PM</span>
           </li>
         </ul>
         <div class="social-links">
-          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="https://www.instagram.com/loscarnalesbar" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">IG</a>
           <a href="#" class="social-link" aria-label="Facebook">FB</a>
           <a href="#" class="social-link" aria-label="TikTok">TK</a>
         </div>
       </div>
       <div class="contact-form-wrap">
-        <h3>Reserve or Inquire</h3>
+        <h3>Reservar o Consultar</h3>
         <form id="contact-form" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required />
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              <label for="email">Correo</label>
+              <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
             </div>
           </div>
           <div class="form-group">
-            <label for="phone">Phone <span class="optional">(optional)</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" />
+            <label for="phone">Teléfono <span class="optional">(opcional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(XXX) XXX-XXXX" />
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
+            <label for="subject">Asunto</label>
             <select id="subject" name="subject">
-              <option value="">Select a topic…</option>
-              <option value="reservation">Table Reservation</option>
-              <option value="private">Private Event</option>
-              <option value="tournament">Tournament Info</option>
-              <option value="other">Other</option>
+              <option value="">Selecciona un tema…</option>
+              <option value="reservacion">Reservar Mesa</option>
+              <option value="torneo">Info de Torneos</option>
+              <option value="evento">Evento Privado</option>
+              <option value="otro">Otro</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell us what you need…" required></textarea>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" placeholder="¿En qué te podemos ayudar?" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
           <p class="form-status" id="form-status" aria-live="polite"></p>
         </form>
       </div>
@@ -376,16 +495,17 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <p class="footer-logo">Los Carnales</p>
-        <p class="footer-tagline">Billiard Lounge &amp; Cocktail Bar</p>
+        <p class="footer-tagline">Bar &amp; Billar — San Felipe, Gto.</p>
       </div>
       <ul class="footer-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#tables">Tables</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#mesas">Mesas</a></li>
+        <li><a href="#torneos">Torneos</a></li>
+        <li><a href="#eventos">Eventos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <p class="footer-copy">&copy; <span id="year"></span> Los Carnales. All rights reserved.</p>
+      <p class="footer-copy">&copy; <span id="year"></span> Los Carnales Bar. Todos los derechos reservados.</p>
     </div>
   </footer>
 
