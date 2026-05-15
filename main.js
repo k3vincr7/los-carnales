@@ -27,22 +27,6 @@
     });
   });
 
-  // ── MENU TABS ────────────────────────────────────────────────
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-
-      tabBtns.forEach(b => b.classList.remove('active'));
-      tabPanels.forEach(p => p.classList.remove('active'));
-
-      btn.classList.add('active');
-      document.getElementById(`tab-${target}`)?.classList.add('active');
-    });
-  });
-
   // ── SCROLL REVEAL ────────────────────────────────────────────
   const revealEls = document.querySelectorAll(
     '.level-card, .menu-item, .pricing-card, .rules-box, .tournament-card, .event-card, .contact-info, .contact-form-wrap, .stat, .food-callout'

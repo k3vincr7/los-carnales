@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Los Carnales Bar — Menú</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #080808;
+    color: #e8dcc8;
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
+  }
+
+/* HEADER */
+.header {
+text-align: center;
+padding: 36px 20px 28px;
+background: linear-gradient(180deg, #161006 0%, #080808 100%);
+border-bottom: 1px solid #c9a84c22;
+}
+.gold-line { width: 50px; height: 2px; background: #c9a84c; margin: 0 auto; }
+.header-city {
+font-size: 10px;
+letter-spacing: 0.4em;
+color: #c9a84c;
+text-transform: uppercase;
+margin: 14px 0 10px;
+}
+.header-name {
+font-size: 42px;
+font-weight: bold;
+letter-spacing: 0.07em;
+text-transform: uppercase;
+color: #f5edd8;
+line-height: 1;
+text-shadow: 0 2px 30px #c9a84c55;
+}
+.header-sub {
+font-size: 11px;
+letter-spacing: 0.3em;
+color: #c9a84c88;
+text-transform: uppercase;
+margin: 8px 0 14px;
+}
+
+/* TABS */
+.tabs {
+display: flex;
+overflow-x: auto;
+gap: 6px;
+padding: 12px 14px;
+background: #0d0d0d;
+border-bottom: 1px solid #1c1c1c;
+scrollbar-width: none;
+-webkit-overflow-scrolling: touch;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+white-space: nowrap;
+padding: 7px 14px;
+border: 1px solid #252525;
+background: transparent;
+color: #7a6840;
+font-size: 12px;
+letter-spacing: 0.05em;
+border-radius: 2px;
+cursor: pointer;
+font-family: Georgia, serif;
+transition: all 0.15s;
+}
+.tab.active {
+border-color: #c9a84c;
+background: #c9a84c;
+color: #080808;
+font-weight: bold;
+}
+
+/* CONTENT */
+.content {
+max-width: 580px;
+width: 100%;
+margin: 0 auto;
+padding: 24px 18px 60px;
+}
+.section { display: none; }
+.section.active { display: block; }
+
+.section-title {
+font-size: 22px;
+font-weight: bold;
+color: #f5edd8;
+letter-spacing: 0.04em;
+margin-bottom: 4px;
+}
+.section-sub {
+font-size: 11px;
+color: #c9a84c;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+margin-top: 4px;
+}
+.section-divider {
+width: 36px;
+height: 1px;
+background: #c9a84c44;
+margin: 10px 0 18px;
+}
+
+/* ITEMS */
+.items { display: flex; flex-direction: column; gap: 3px; }
+.item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 13px 14px;
+border-left: 3px solid transparent;
+border-radius: 2px;
+}
+.item:nth-child(odd)  { background: #111111; }
+.item:nth-child(even) { background: #0d0d0d; }
+.item.highlight {
+border-left-color: #c9a84c;
+}
+.item-name {
+font-size: 14px;
+color: #ccc0a0;
+letter-spacing: 0.02em;
+}
+.item.highlight .item-name {
+color: #f5edd8;
+font-weight: bold;
+}
+.item-detail {
+font-size: 10px;
+color: #5a4a2a;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+margin-top: 2px;
+}
+.item-price {
+font-size: 16px;
+color: #8a7040;
+font-weight: bold;
+margin-left: 16px;
+white-space: nowrap;
+}
+.item.highlight .item-price { color: #c9a84c; }
+
+/* FOOTER NOTE */
+.section-footer {
+margin-top: 18px;
+padding: 12px 14px;
+background: #111;
+border: 1px solid #1e1e1e;
+border-radius: 2px;
+font-size: 12px;
+color: #6a5a3a;
+line-height: 1.6;
+font-style: italic;
+}
+
+/* PAGE FOOTER */
+.page-footer {
+text-align: center;
+padding: 18px 20px;
+border-top: 1px solid #151515;
+font-size: 9px;
+letter-spacing: 0.18em;
+color: #2e2410;
+text-transform: uppercase;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="gold-line"></div>
+  <div class="header-city">San Felipe · Guanajuato · México</div>
+  <div class="header-name">Los Carnales</div>
+  <div class="header-sub">Bar · Billar</div>
+  <div class="gold-line"></div>
+</div>
+
+<!-- TABS -->
+<div class="tabs">
+  <button class="tab active" onclick="show('barril',this)">🍺 Barril</button>
+  <button class="tab" onclick="show('botella',this)">🍻 Botella</button>
+  <button class="tab" onclick="show('micheladas',this)">🔥 Micheladas</button>
+  <button class="tab" onclick="show('frozen',this)">🍹 Frozen</button>
+  <button class="tab" onclick="show('cocteles',this)">🍸 Cocteles</button>
+  <button class="tab" onclick="show('shots',this)">🥃 Shots</button>
+  <button class="tab" onclick="show('destilados',this)">🥃 Destilados</button>
+  <button class="tab" onclick="show('sinalcohol',this)">🥤 Sin Alcohol</button>
+  <button class="tab" onclick="show('botanas',this)">🍟 Botanas</button>
+  <button class="tab" onclick="show('billar',this)">🎱 Billar</button>
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+  <!-- BARRIL -->
+  <div id="barril" class="section active">
+    <div class="section-title">🍺 Cerveza de Barril</div>
+    <div class="section-sub">Corona · Modelo Especial</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div><div class="item-name">Vaso Chico</div><div class="item-detail">300ml</div></div><div class="item-price">$50</div></div>
+      <div class="item"><div><div class="item-name">Vaso Grande</div><div class="item-detail">500ml</div></div><div class="item-price">$75</div></div>
+      <div class="item highlight"><div><div class="item-name">Jarra</div><div class="item-detail">1.5L</div></div><div class="item-price">$180</div></div>
+    </div>
+  </div>
+
+  <!-- BOTELLA -->
+  <div id="botella" class="section">
+    <div class="section-title">🍻 Cerveza en Botella</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Corona / Corona Light</div><div class="item-price">$50</div></div>
+      <div class="item"><div class="item-name">Modelo / Negra Modelo</div><div class="item-price">$50</div></div>
+      <div class="item"><div class="item-name">Victoria / Indio</div><div class="item-price">$45</div></div>
+      <div class="item"><div class="item-name">Tecate Roja / Light</div><div class="item-price">$45</div></div>
+      <div class="item"><div class="item-name">Heineken / Michelob Ultra</div><div class="item-price">$60</div></div>
+      <div class="item"><div class="item-name">Bohemia Clara / Oscura</div><div class="item-price">$55</div></div>
+      <div class="item highlight"><div><div class="item-name">Bucket 5 Cervezas</div><div class="item-detail">tu elección</div></div><div class="item-price">$210</div></div>
+      <div class="item highlight"><div><div class="item-name">Bucket 10 Cervezas</div><div class="item-detail">tu elección</div></div><div class="item-price">$400</div></div>
+    </div>
+  </div>
+
+  <!-- MICHELADAS -->
+  <div id="micheladas" class="section">
+    <div class="section-title">🔥 Micheladas</div>
+    <div class="section-sub">+$15 rim chamoy/tajín</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Michelada Clásica</div><div class="item-price">$75</div></div>
+      <div class="item highlight"><div><div class="item-name">La Carnales</div><div class="item-detail">house special</div></div><div class="item-price">$90</div></div>
+      <div class="item"><div class="item-name">Tamarindo / Mango</div><div class="item-price">$85</div></div>
+      <div class="item"><div><div class="item-name">Spicy</div><div class="item-detail">chile + limón</div></div><div class="item-price">$85</div></div>
+      <div class="item"><div class="item-name">Estilo Clamato</div><div class="item-price">$85</div></div>
+      <div class="item highlight"><div class="item-name">Jarra Michelera</div><div class="item-price">$200</div></div>
+    </div>
+  </div>
+
+  <!-- FROZEN -->
+  <div id="frozen" class="section">
+    <div class="section-title">🍹 Frozen Margaritas</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Clásica Limón</div><div class="item-price">$85</div></div>
+      <div class="item"><div class="item-name">Fresa / Mango / Sandía</div><div class="item-price">$90</div></div>
+      <div class="item"><div class="item-name">Tamarindo / Maracuyá</div><div class="item-price">$90</div></div>
+      <div class="item highlight"><div class="item-name">Spicy Chile-Limón</div><div class="item-price">$95</div></div>
+    </div>
+  </div>
+
+  <!-- COCTELES -->
+  <div id="cocteles" class="section">
+    <div class="section-title">🍸 Cocteles</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Cuba Libre</div><div class="item-price">$75</div></div>
+      <div class="item"><div class="item-name">Paloma</div><div class="item-price">$80</div></div>
+      <div class="item"><div class="item-name">Ranch Water</div><div class="item-price">$80</div></div>
+      <div class="item"><div class="item-name">Tequila Sunrise</div><div class="item-price">$85</div></div>
+      <div class="item"><div class="item-name">Vodka Soda</div><div class="item-price">$75</div></div>
+      <div class="item"><div class="item-name">Gin &amp; Tónica</div><div class="item-price">$85</div></div>
+      <div class="item"><div class="item-name">Whiskey &amp; Coke</div><div class="item-price">$85</div></div>
+      <div class="item highlight"><div class="item-name">Old Fashioned</div><div class="item-price">$110</div></div>
+    </div>
+  </div>
+
+  <!-- SHOTS -->
+  <div id="shots" class="section">
+    <div class="section-title">🥃 Shots</div>
+    <div class="section-sub">1 oz</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Tequila</div><div class="item-price">$50</div></div>
+      <div class="item"><div class="item-name">Mezcal</div><div class="item-price">$60</div></div>
+      <div class="item"><div class="item-name">Vodka</div><div class="item-price">$50</div></div>
+      <div class="item"><div class="item-name">Whiskey</div><div class="item-price">$55</div></div>
+      <div class="item highlight"><div class="item-name">Shot de la Casa</div><div class="item-price">$45</div></div>
+    </div>
+  </div>
+
+  <!-- DESTILADOS -->
+  <div id="destilados" class="section">
+    <div class="section-title">🥃 Destilados</div>
+    <div class="section-sub">2 oz por trago</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Tequila Tradicional / Jimador</div><div class="item-price">$90</div></div>
+      <div class="item"><div class="item-name">Tequila 1800</div><div class="item-price">$105</div></div>
+      <div class="item"><div class="item-name">Mezcal 400 Conejos / Ojo de Tigre</div><div class="item-price">$105</div></div>
+      <div class="item"><div class="item-name">Ron Bacardí / Capitán Morgan</div><div class="item-price">$90</div></div>
+      <div class="item"><div class="item-name">Vodka Smirnoff / Absolut</div><div class="item-price">$95</div></div>
+      <div class="item"><div class="item-name">Whiskey JD / JW Red</div><div class="item-price">$115</div></div>
+      <div class="item highlight"><div class="item-name">JW Black / Buchanan's 12</div><div class="item-price">$145</div></div>
+    </div>
+  </div>
+
+  <!-- SIN ALCOHOL -->
+  <div id="sinalcohol" class="section">
+    <div class="section-title">🥤 Sin Alcohol</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Coca-Cola / Sprite / Sidral</div><div class="item-price">$30</div></div>
+      <div class="item"><div class="item-name">Topo Chico / Agua Mineral</div><div class="item-price">$30</div></div>
+      <div class="item"><div class="item-name">Agua Embotellada</div><div class="item-price">$25</div></div>
+      <div class="item"><div class="item-name">Red Bull</div><div class="item-price">$65</div></div>
+      <div class="item"><div class="item-name">Jugo Naranja / Tomate</div><div class="item-price">$30</div></div>
+    </div>
+  </div>
+
+  <!-- BOTANAS -->
+  <div id="botanas" class="section">
+    <div class="section-title">🍟 Botanas</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">Papas Fritas</div><div class="item-price">$65</div></div>
+      <div class="item"><div class="item-name">Papas Sazonadas</div><div class="item-price">$75</div></div>
+      <div class="item"><div class="item-name">Nachos con Queso</div><div class="item-price">$80</div></div>
+      <div class="item"><div class="item-name">Cacahuates / Botana de la Casa</div><div class="item-price">$35</div></div>
+    </div>
+    <div class="section-footer">🍔 También contamos con servicio de entrega de socios gastronómicos — pregunta a tu mesero por el menú disponible.</div>
+  </div>
+
+  <!-- BILLAR -->
+  <div id="billar" class="section">
+    <div class="section-title">🎱 Hora de Mesa</div>
+    <div class="section-sub">Billar</div>
+    <div class="section-divider"></div>
+    <div class="items">
+      <div class="item"><div class="item-name">1 Hora</div><div class="item-price">$80</div></div>
+      <div class="item"><div class="item-name">2 Horas</div><div class="item-price">$150</div></div>
+      <div class="item highlight"><div><div class="item-name">Noche Completa</div><div class="item-detail">consumo mín. $300/persona</div></div><div class="item-price">$200</div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  Av. Miramar 601 · San Felipe, Gto. · El abuso en el consumo de alcohol es nocivo para la salud.
+</div>
+
+<script>
+  function show(id, btn) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+
+</body>
+</html>

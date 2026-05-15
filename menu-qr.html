@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Los Carnales — Código QR Menú</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #080808;
+    color: #e8dcc8;
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background: #0f0e0a;
+    border: 1px solid #c9a84c33;
+    border-radius: 4px;
+    padding: 48px 40px;
+    text-align: center;
+    max-width: 380px;
+    width: 100%;
+  }
+
+  .gold-line {
+    width: 40px;
+    height: 2px;
+    background: #c9a84c;
+    margin: 0 auto;
+  }
+
+  .city {
+    font-size: 9px;
+    letter-spacing: 0.4em;
+    color: #c9a84c;
+    text-transform: uppercase;
+    margin: 16px 0 10px;
+  }
+
+  .name {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #f5edd8;
+    text-shadow: 0 2px 20px #c9a84c44;
+    line-height: 1;
+  }
+
+  .sub {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: #c9a84c66;
+    text-transform: uppercase;
+    margin: 8px 0 28px;
+  }
+
+  #qrcode {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 24px;
+  }
+
+  #qrcode canvas,
+  #qrcode img {
+    border: 10px solid #fff;
+    border-radius: 2px;
+  }
+
+  .instruction {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: #c9a84c88;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .url {
+    font-size: 10px;
+    color: #3a3020;
+    letter-spacing: 0.05em;
+    margin-bottom: 28px;
+  }
+
+  .divider {
+    width: 30px;
+    height: 1px;
+    background: #c9a84c22;
+    margin: 0 auto 28px;
+  }
+
+  .print-btn {
+    background: #c9a84c;
+    color: #080808;
+    border: none;
+    padding: 10px 28px;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+
+  .print-btn:hover { background: #e0bc60; }
+
+  @media print {
+    body { background: #fff; justify-content: flex-start; padding: 20px; }
+    .card { border-color: #ccc; background: #fff; }
+    .name { color: #111; text-shadow: none; }
+    .city, .sub, .instruction { color: #555; }
+    .url { color: #999; }
+    .gold-line, .divider { background: #bbb; }
+    .print-btn { display: none; }
+    #qrcode canvas, #qrcode img { border-color: #000; }
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="gold-line"></div>
+  <div class="city">San Felipe · Guanajuato · México</div>
+  <div class="name">Los Carnales</div>
+  <div class="sub">Bar · Billar</div>
+
+  <div id="qrcode"></div>
+
+  <div class="instruction">Escanea para ver el menú</div>
+  <div class="url">k3vincr7.github.io/los-carnales/menu.html</div>
+
+  <div class="divider"></div>
+
+  <button class="print-btn" onclick="window.print()">Imprimir</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  new QRCode(document.getElementById('qrcode'), {
+    text: 'https://k3vincr7.github.io/los-carnales/menu.html',
+    width: 260,
+    height: 260,
+    colorDark: '#000000',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+
+</body>
+</html>
