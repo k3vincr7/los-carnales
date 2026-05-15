@@ -88,12 +88,21 @@
       return;
     }
 
-    // Placeholder submission — swap in your backend/Formspree endpoint
     showStatus('Enviando…', '');
-    setTimeout(() => {
-      showStatus('¡Mensaje enviado! Te contactamos pronto.', 'success');
-      form.reset();
-    }, 1000);
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        showStatus('¡Mensaje enviado! Te contactamos pronto.', 'success');
+        form.reset();
+      } else {
+        showStatus('Algo salió mal. Escríbenos directo a loscarnales.sf@gmail.com', 'error');
+      }
+    }).catch(() => {
+      showStatus('Error de conexión. Intenta de nuevo o escríbenos directo.', 'error');
+    });
   });
 
   function showStatus(msg, type) {
