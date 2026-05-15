@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 body {
@@ -825,6 +826,8 @@ ul { list-style: none; }
   .pricing-grid {
     grid-template-columns: 1fr;
     max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -884,6 +887,21 @@ ul { list-style: none; }
   .about-stats { flex-direction: column; gap: 1.5rem; }
   .tab-btn { padding: 0.65rem 1rem; font-size: 0.72rem; }
   .menu-grid { grid-template-columns: 1fr; }
+
+  .pricing-card,
+  .level-card,
+  .tournament-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .pricing-amount { font-size: 2rem; }
+
+  .pricing-grid,
+  .levels-grid,
+  .tournament-grid {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* ── HERO LOGO ───────────────────────────── */
