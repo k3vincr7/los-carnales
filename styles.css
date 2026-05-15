@@ -865,6 +865,13 @@ ul { list-style: none; }
 
   .section { padding: 5rem 0; }
 
+  .levels-grid,
+  .tournament-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
   .form-row { grid-template-columns: 1fr; }
 
   .contact-form-wrap { padding: 1.75rem; }
