@@ -415,6 +415,10 @@
             <span><a href="tel:+">(XXX) XXX-XXXX</a></span>
           </li>
           <li>
+            <span class="contact-icon">📧</span>
+            <span><a href="mailto:loscarnales.sf@gmail.com">loscarnales.sf@gmail.com</a></span>
+          </li>
+          <li>
             <span class="contact-icon">🕐</span>
             <div class="hours">
               <p>Martes – Viernes: 12 PM – 12 AM</p>
@@ -435,7 +439,9 @@
       </div>
       <div class="contact-form-wrap">
         <h3>Reservar o Consultar</h3>
-        <form id="contact-form" novalidate>
+        <!-- Replace FORM_ID with your actual Formspree form ID from formspree.io -->
+        <form id="contact-form" action="https://formspree.io/f/FORM_ID" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nuevo mensaje — Los Carnales Bar" />
           <div class="form-row">
             <div class="form-group">
               <label for="name">Nombre</label>
