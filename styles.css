@@ -231,6 +231,7 @@ ul { list-style: none; }
   justify-content: center;
   text-align: center;
   background: var(--bg);
+  padding-top: var(--nav-h);
 }
 
 .hero-overlay { display: none; }
