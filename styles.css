@@ -831,6 +831,11 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   :root { --nav-h: 62px; }
 
+  #navbar {
+    background: rgba(13, 13, 13, 0.97);
+    backdrop-filter: blur(10px);
+  }
+
   .nav-toggle { display: flex; }
 
   .nav-links {
